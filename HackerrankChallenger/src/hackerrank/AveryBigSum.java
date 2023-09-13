@@ -8,7 +8,7 @@ public class AveryBigSum {
 	public static void main(String[] args) {
 		List<Long> data = new ArrayList<Long>();
 		for (int i = 0; i < 10; i++) {
-			data.add(new Random().nextLong());
+			data.add(new Random(10).nextLong());
 		}
 		System.out.println(aVeryBigSum(data));
 	}
