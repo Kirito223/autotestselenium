@@ -11,6 +11,9 @@ import java.util.Scanner;
 
 public class ReadData {
 	public static List<Integer> readData(String filename) {
+		if(filename.contains("data")== false) {
+			filename = "./data/"+ filename;
+		}
 		String data = "";
 		try {
 			File myObj = new File(filename);
@@ -31,6 +34,14 @@ public class ReadData {
 		}
 		return result;
 
+	}
+	
+	public static int[] convertListToIntArray(List<Integer> data ) {
+		int[] result = new int[data.size()];
+		for (int i = 0; i < data.size(); i++) {
+			result[i]= data.get(i);
+		}
+		return result;
 	}
 
 	public static boolean WriteFileData(String filename, List<Integer> data) {
